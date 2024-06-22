@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(cors())
 connecctDB();
-app.use('/api', userRoutes);
+app.use('/api/users', userRoutes);
 app.use('/api/folders', authMiddleware, folderRoutes);
 app.use('/api/images', authMiddleware, imageRoutes);
 

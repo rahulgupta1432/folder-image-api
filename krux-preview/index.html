@@ -72,6 +72,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .hero-card .ring.r2{width:85%;animation-duration:26s;animation-direction:reverse}
 @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 .hero-card .cap{position:absolute;left:0;right:0;bottom:28px;text-align:center;color:var(--cream);font-size:13px;letter-spacing:4px;font-weight:600}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45;mix-blend-mode:luminosity;animation:kenburns 18s ease-in-out infinite alternate}
+@keyframes kenburns{to{transform:scale(1.12)}}
 .float-chip{position:absolute;background:var(--cream-2);border-radius:16px;padding:14px 18px;box-shadow:0 20px 40px -15px #1f332655;font-size:13px;font-weight:600;display:flex;gap:10px;align-items:center;animation:bob 5s ease-in-out infinite}
 .float-chip b{display:block;font-size:20px;font-weight:900;color:var(--green)}
 .float-chip.c1{left:-30px;top:18%}
@@ -140,6 +142,8 @@ section{padding:110px 0}
 .tile{border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;color:var(--cream)}
 .tile .bg{position:absolute;inset:0;transition:transform 1.2s var(--ease)}
 .tile:hover .bg{transform:scale(1.08)}
+.tile .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile>.shade.shade{position:absolute;inset:0;background:linear-gradient(180deg,#0000 35%,#000b)}
 .tile>*:not(.bg){position:relative}
 .tile .lbl{align-self:flex-start;background:var(--cream-2);color:var(--green);font-size:11px;font-weight:800;letter-spacing:1.5px;padding:6px 12px;border-radius:999px;margin-bottom:auto}
 .tile h4{font-size:24px;font-weight:800}
@@ -248,6 +252,7 @@ footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;m
     </div>
     <div class="hero-art">
       <div class="hero-card">
+        <img class="hero-photo" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=70" alt="" onerror="this.remove()">
         <div class="ring"></div><div class="ring r2"></div>
         <div class="big">KRUX</div>
         <div class="cap">GET FIT</div>
@@ -321,10 +326,10 @@ footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;m
       <p class="rv d1">Premium, biomechanically designed machines for every muscle group, plus a full cardio deck.</p>
     </div>
     <div class="equip">
-      <div class="tile t1 rv"><div class="bg"></div><span class="lbl">STRENGTH FLOOR</span><h4>Selectorised machines</h4><p>Chest press, lateral raise, leg press and more</p></div>
-      <div class="tile t2 rv d1"><div class="bg"></div><span class="lbl">FREE WEIGHTS</span><h4>Dumbbells &amp; racks</h4></div>
-      <div class="tile t3 rv d2"><div class="bg"></div><span class="lbl">CARDIO</span><h4>Treadmills &amp; bikes</h4></div>
-      <div class="tile t4 rv d1"><div class="bg"></div><span class="lbl">STUDIO</span><h4>Yoga &amp; MMA zone</h4></div>
+      <div class="tile t1 rv"><div class="bg"><img class="" src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" onerror="this.remove()"></div><div class="shade"></div><span class="lbl">STRENGTH FLOOR</span><h4>Selectorised machines</h4><p>Chest press, lateral raise, leg press and more</p></div>
+      <div class="tile t2 rv d1"><div class="bg"><img class="" src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" onerror="this.remove()"></div><div class="shade"></div><span class="lbl">FREE WEIGHTS</span><h4>Dumbbells &amp; racks</h4></div>
+      <div class="tile t3 rv d2"><div class="bg"><img class="" src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" onerror="this.remove()"></div><div class="shade"></div><span class="lbl">CARDIO</span><h4>Treadmills &amp; bikes</h4></div>
+      <div class="tile t4 rv d1"><div class="bg"><img class="" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" onerror="this.remove()"></div><div class="shade"></div><span class="lbl">STUDIO</span><h4>Yoga &amp; MMA zone</h4></div>
       <div class="tile t5 rv d2"><div class="bg"></div><span class="lbl">RECOVERY</span><h4>Ice bath</h4></div>
     </div>
   </div>

@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KRUX Get Fit</title>
+<meta name="description" content="Premium Fitness & Wellness Club in Santacruz East, Mumbai. Strength, Conditioning, Yoga, MMA and Recovery with certified professional trainers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#2f4a36; --green-d:#1f3326; --green-l:#4d6b52;
+  --cream:#ecE8dc; --cream-2:#f6f3ea; --sand:#d8d1bd;
+  --gold:#c9a24a; --ink:#16201a; --muted:#5d685f; --line:#d6d0bf;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream-2);color:var(--ink);font-family:Archivo,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-style:italic;letter-spacing:0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--green-l)}
+.eyebrow::before{content:"";width:28px;height:1.5px;background:currentColor}
+h1,h2,h3{font-weight:900;letter-spacing:-.02em;line-height:1}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .4s var(--ease),background .3s,color .3s,box-shadow .4s;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-3px)}
+.btn .arr{transition:transform .4s var(--ease)}
+.btn:hover .arr{transform:translateX(5px)}
+.btn-green{background:var(--green);color:var(--cream-2);box-shadow:0 10px 30px -10px #2f4a3699}
+.btn-green:hover{background:var(--green-d);box-shadow:0 18px 40px -12px #2f4a36aa}
+.btn-line{border:1.5px solid currentColor}
+.btn-cream{background:var(--cream-2);color:var(--green)}
+
+.ribbon{background:var(--ink);color:var(--cream);text-align:center;font-size:12.5px;padding:8px 16px;letter-spacing:.3px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;transition:background .4s,box-shadow .4s}
+nav.scrolled{background:#f6f3eaee;backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px;letter-spacing:4px;color:var(--green)}
+.logo-mark{width:38px;height:38px;border-radius:50%;background:var(--green);display:grid;place-items:center}
+.nav-links{display:flex;gap:32px;font-size:14px;font-weight:500}
+.nav-links a{position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;height:1.5px;width:100%;background:var(--green);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+@media(max-width:880px){.nav-links{display:none}.nav-cta{padding:11px 18px!important;font-size:14px!important}}
+
+/* hero */
+.hero{position:relative;padding:60px 0 100px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(54px,9vw,128px);color:var(--green-d)}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .line span{display:inline-block;transform:translateY(110%);animation:rise 1.1s var(--ease) forwards}
+.hero h1 .line:nth-child(2) span{animation-delay:.12s}
+.hero h1 .line:nth-child(3) span{animation-delay:.24s}
+.hero h1 .serif{color:var(--green-l)}
+@keyframes rise{to{transform:none}}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:500px;margin:26px 0 34px;opacity:0;animation:fadeUp 1s var(--ease) .55s forwards}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;opacity:0;animation:fadeUp 1s var(--ease) .7s forwards}
+.hero .eyebrow{opacity:0;animation:fadeUp .9s var(--ease) .05s forwards;margin-bottom:22px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+.hero-art{position:relative;aspect-ratio:4/5;max-width:440px;width:100%;margin-left:auto;opacity:0;animation:fadeScale 1.4s var(--ease) .3s forwards}
+@keyframes fadeScale{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+.hero-card{position:absolute;inset:0;border-radius:200px 200px 28px 28px;background:
+  radial-gradient(circle at 50% 30%,#4d6b52,transparent 60%),linear-gradient(170deg,var(--green-l),var(--green-d));overflow:hidden}
+.hero-card::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 38px,#ffffff0a 38px 39px)}
+.hero-card .big{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-weight:900;font-size:clamp(56px,6vw,76px);color:var(--cream);letter-spacing:4px;opacity:.95}
+.hero-card .ring{position:absolute;left:50%;top:44%;width:120%;aspect-ratio:1;border:1px solid #ecE8dc33;border-radius:50%;transform:translate(-50%,-50%);animation:spin 40s linear infinite}
+.hero-card .ring::after{content:"";position:absolute;top:-5px;left:50%;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.hero-card .ring.r2{width:85%;animation-duration:26s;animation-direction:reverse}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.hero-card .cap{position:absolute;left:0;right:0;bottom:28px;text-align:center;color:var(--cream);font-size:13px;letter-spacing:4px;font-weight:600}
+.float-chip{position:absolute;background:var(--cream-2);border-radius:16px;padding:14px 18px;box-shadow:0 20px 40px -15px #1f332655;font-size:13px;font-weight:600;display:flex;gap:10px;align-items:center;animation:bob 5s ease-in-out infinite}
+.float-chip b{display:block;font-size:20px;font-weight:900;color:var(--green)}
+.float-chip.c1{left:-30px;top:18%}
+.float-chip.c2{right:-20px;bottom:16%;animation-delay:-2.5s}
+.dot{width:10px;height:10px;border-radius:50%;background:#3fae5a;box-shadow:0 0 0 0 #3fae5a88;animation:pulse 2s infinite}
+@keyframes bob{50%{transform:translateY(-12px)}}
+@keyframes pulse{70%{box-shadow:0 0 0 10px #3fae5a00}100%{box-shadow:0 0 0 0 #3fae5a00}}
+@media(max-width:880px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{margin:10px auto 0;max-width:330px}
+  .float-chip.c1{left:-8px}.float-chip.c2{right:-8px}
+}
+
+/* marquee */
+.marquee{background:var(--green);color:var(--cream);overflow:hidden;padding:22px 0;white-space:nowrap}
+.marquee .track{display:inline-flex;gap:48px;animation:marq 28s linear infinite;font-weight:800;font-size:clamp(22px,3.4vw,36px);text-transform:uppercase;letter-spacing:1px}
+.marquee .track span{display:inline-flex;align-items:center;gap:48px}
+.marquee .track span::after{content:"✦";color:var(--gold);font-size:.6em}
+.marquee .track .serif{text-transform:none;font-weight:400}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{padding:110px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(40px,6vw,76px);color:var(--green-d);max-width:760px}
+.sec-head h2 .serif{color:var(--green-l)}
+.sec-head p{color:var(--muted);max-width:360px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}.js .rv.d4{transition-delay:.4s}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:980px){.pillars{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.pillars{grid-template-columns:1fr}}
+.pillar{background:var(--cream);border-radius:24px;padding:30px 26px 28px;min-height:330px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .6s var(--ease),background .5s,color .5s}
+.pillar::before{content:"";position:absolute;inset:0;background:var(--green);transform:translateY(101%);transition:transform .6s var(--ease);z-index:0}
+.pillar>*{position:relative;z-index:1}
+.pillar:hover{transform:translateY(-8px);color:var(--cream)}
+.pillar:hover::before{transform:none}
+.pillar .ic{width:64px;height:64px;border-radius:50%;background:var(--green);color:var(--cream);display:grid;place-items:center;transition:background .5s,color .5s,transform .6s var(--ease)}
+.pillar:hover .ic{background:var(--cream);color:var(--green);transform:rotate(-12deg) scale(1.08)}
+.pillar .num{position:absolute;top:28px;right:26px;font-size:13px;font-weight:700;opacity:.5}
+.pillar h3{font-size:28px;margin-top:auto;padding-top:40px}
+.pillar p{font-size:15px;margin-top:10px;opacity:.8}
+
+/* split / beyond */
+.beyond{background:var(--green-d);color:var(--cream);position:relative;overflow:hidden}
+.beyond .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+@media(max-width:880px){.beyond .wrap{grid-template-columns:1fr;gap:40px}}
+.beyond h2{font-size:clamp(48px,8vw,104px);text-transform:uppercase}
+.beyond h2 .serif{text-transform:none;color:var(--gold)}
+.beyond p{color:#ecE8dccc;font-size:17px;margin:22px 0 30px;max-width:460px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ecE8dc22;border-radius:24px;overflow:hidden}
+.stat{background:var(--green-d);padding:34px 28px}
+.stat b{font-size:clamp(44px,6vw,64px);font-weight:900;display:block;line-height:1;color:var(--cream)}
+.stat>span{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#ecE8dc99;font-weight:600}
+.beyond .glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(#4d6b5288,transparent 70%);top:-200px;right:-200px;animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-120px,120px)}}
+
+/* equipment */
+.equip{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-auto-rows:240px;gap:18px}
+@media(max-width:880px){.equip{grid-template-columns:1fr 1fr;grid-auto-rows:200px}}
+@media(max-width:560px){.equip{grid-template-columns:1fr}}
+.tile{border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;color:var(--cream)}
+.tile .bg{position:absolute;inset:0;transition:transform 1.2s var(--ease)}
+.tile:hover .bg{transform:scale(1.08)}
+.tile>*:not(.bg){position:relative}
+.tile .lbl{align-self:flex-start;background:var(--cream-2);color:var(--green);font-size:11px;font-weight:800;letter-spacing:1.5px;padding:6px 12px;border-radius:999px;margin-bottom:auto}
+.tile h4{font-size:24px;font-weight:800}
+.tile p{font-size:14px;opacity:.85}
+.t1{grid-row:span 2}
+.t1 .bg{background:radial-gradient(circle at 70% 20%,#6c8a70,transparent 55%),linear-gradient(160deg,#3a5a41,#18291e)}
+.t2 .bg{background:linear-gradient(140deg,#8a7a55,#4a3f28)}
+.t3 .bg{background:linear-gradient(140deg,#2a3f5a,#121c2b)}
+.t4 .bg{background:linear-gradient(140deg,#4d6b52,#26392b)}
+.t5 .bg{background:linear-gradient(140deg,#1d2a40,#0b111c)}
+.t5 .bg::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 30%,#7fd3ff55,transparent 50%)}
+@media(max-width:560px){.t1{grid-row:span 1}}
+
+/* trainers / why */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+@media(max-width:880px){.why{grid-template-columns:1fr}}
+.why-item{border-top:1.5px solid var(--green);padding-top:24px}
+.why-item b{font-size:13px;color:var(--green-l);letter-spacing:2px}
+.why-item h4{font-size:24px;margin:10px 0 8px;color:var(--green-d)}
+.why-item p{color:var(--muted)}
+
+/* membership */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+@media(max-width:900px){.plans{grid-template-columns:1fr}}
+.plan{background:var(--cream);border-radius:26px;padding:34px;display:flex;flex-direction:column;transition:transform .5s var(--ease),box-shadow .5s}
+.plan:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px #1f332666}
+.plan.feat{background:var(--green);color:var(--cream)}
+.plan .tagp{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:.7}
+.plan h3{font-size:34px;margin:8px 0 6px}
+.plan .desc{opacity:.75;font-size:15px}
+.plan ul{list-style:none;margin:24px 0 30px;display:grid;gap:10px;font-size:15px}
+.plan li{display:flex;gap:10px}
+.plan li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f6f3ea' stroke-width='3'%3E%3Cpath d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/12px no-repeat}
+.plan.feat li::before{background-color:var(--gold)}
+.plan .btn{margin-top:auto;justify-content:center}
+.pop{align-self:flex-start;background:var(--gold);color:var(--ink);font-size:11px;font-weight:800;letter-spacing:1.5px;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+
+/* visit */
+.visit{background:var(--cream)}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:880px){.visit .wrap{grid-template-columns:1fr}}
+.visit h2{font-size:clamp(40px,6vw,72px);color:var(--green-d)}
+.visit h2 .serif{color:var(--green-l)}
+.addr{margin:26px 0;display:grid;gap:14px}
+.addr a,.addr div{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;background:var(--cream-2);border-radius:16px;transition:transform .4s var(--ease)}
+.addr a:hover{transform:translateX(6px)}
+.addr small{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:700}
+.addr svg{flex:none;color:var(--green);margin-top:3px}
+form{background:var(--cream-2);border-radius:26px;padding:34px;display:grid;gap:14px;align-self:start}
+form h3{font-size:28px;color:var(--green-d)}
+form p{color:var(--muted);font-size:15px;margin-top:-6px}
+.field{position:relative}
+.field input,.field select{width:100%;background:transparent;border:0;border-bottom:1.5px solid var(--line);padding:16px 0 10px;font:inherit;color:var(--ink);transition:border-color .3s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--green)}
+.field label{position:absolute;left:0;top:16px;color:var(--muted);pointer-events:none;transition:all .3s var(--ease)}
+.field input:focus+label,.field input:not(:placeholder-shown)+label{top:-4px;font-size:12px;color:var(--green)}
+.ok{display:none;color:var(--green);font-weight:700}
+
+footer{background:var(--green-d);color:#ecE8dcaa;padding:60px 0 30px}
+footer .big{font-size:clamp(70px,18vw,230px);font-weight:900;letter-spacing:.06em;color:var(--cream);line-height:.9;text-align:center;opacity:.95}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:30px;font-size:14px;border-top:1px solid #ecE8dc22;padding-top:22px}
+
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--gold);width:0;z-index:100}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero h1 .line span{transform:none}
+  .hero p.lead,.hero .ctas,.hero .eyebrow,.hero-art{opacity:1}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="ribbon">Concept preview made for KRUX Get Fit's feedback · not the official website</div>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo"><span class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ecE8dc" stroke-width="2.6" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19M5 12h4M15 12h4"/></svg></span>KRUX</a>
+    <div class="nav-links">
+      <a href="#train">Train</a>
+      <a href="#beyond">The Club</a>
+      <a href="#equipment">Equipment</a>
+      <a href="#membership">Membership</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a href="#visit" class="btn btn-green nav-cta">Free Trial</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Santacruz East · Mumbai</div>
+      <h1>
+        <span class="line"><span>Premium</span></span>
+        <span class="line"><span class="serif">fitness &amp;</span></span>
+        <span class="line"><span>wellness.</span></span>
+      </h1>
+      <p class="lead">Strength, conditioning, yoga, MMA and recovery, all under one roof, coached by certified professional trainers.</p>
+      <div class="ctas">
+        <a href="#visit" class="btn btn-green">Book a Free Trial <span class="arr">→</span></a>
+        <a href="#train" class="btn btn-line">Explore the Club</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-card">
+        <div class="ring"></div><div class="ring r2"></div>
+        <div class="big">KRUX</div>
+        <div class="cap">GET FIT</div>
+      </div>
+      <div class="float-chip c1"><span class="dot"></span><div>Certified<br>Trainers</div></div>
+      <div class="float-chip c2"><div><b>5-in-1</b>Training club</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Strength</span><span class="serif">Conditioning</span><span>Yoga</span><span class="serif">MMA</span><span>Recovery</span><span class="serif">Community</span>
+    <span>Strength</span><span class="serif">Conditioning</span><span>Yoga</span><span class="serif">MMA</span><span>Recovery</span><span class="serif">Community</span>
+  </div>
+</div>
+
+<section id="train">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="rv">Four ways to <span class="serif">train at</span> KRUX</h2>
+      <p class="rv d1">Whatever your goal, there's a space and a coach for it. Mix and match to build your week.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar rv">
+        <span class="num">01</span>
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/></svg></div>
+        <h3>Strength</h3><p>Premium strength equipment, free weights and coached programming to get stronger, safely.</p>
+      </div>
+      <div class="pillar rv d1">
+        <span class="num">02</span>
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 3L4 14h7l-1 7 9-11h-7z"/></svg></div>
+        <h3>Combat</h3><p>MMA and conditioning sessions that build power, speed, stamina and confidence.</p>
+      </div>
+      <div class="pillar rv d2">
+        <span class="num">03</span>
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="2"/><path d="M4 20c2-3 5-4 8-4s6 1 8 4M12 8v5M7 12l5 1 5-1"/></svg></div>
+        <h3>Flow</h3><p>Yoga and mobility to move better, breathe deeper and balance out hard training.</p>
+      </div>
+      <div class="pillar rv d3">
+        <span class="num">04</span>
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v6M12 15v6M4.2 7.5l5.2 3M14.6 13.5l5.2 3M4.2 16.5l5.2-3M14.6 10.5l5.2-3"/></svg></div>
+        <h3>Recovery</h3><p>Ice bath and recovery sessions so you come back fresher and train harder.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="beyond" id="beyond">
+  <div class="glow"></div>
+  <div class="wrap" style="position:relative">
+    <div>
+      <div class="eyebrow rv" style="color:var(--gold)">The KRUX way</div>
+      <h2 class="rv d1" style="margin-top:18px">Beyond <span class="serif">the</span> weights</h2>
+      <p class="rv d2">KRUX isn't just a gym. It's a fitness and wellness club where training, recovery and community come together, so you see results and actually enjoy getting there.</p>
+      <a href="#visit" class="btn btn-cream rv d3">Visit the Club <span class="arr">→</span></a>
+    </div>
+    <div class="stats rv d2">
+      <div class="stat"><b><span data-count="5">0</span></b><span>Training styles</span></div>
+      <div class="stat"><b><span data-count="100">0</span>%</b><span>Certified coaches</span></div>
+      <div class="stat"><b>1:1</b><span>Personal training</span></div>
+      <div class="stat"><b>❄</b><span>Ice bath recovery</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="equipment">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="rv">Meet the <span class="serif">equipment</span></h2>
+      <p class="rv d1">Premium, biomechanically designed machines for every muscle group, plus a full cardio deck.</p>
+    </div>
+    <div class="equip">
+      <div class="tile t1 rv"><div class="bg"></div><span class="lbl">STRENGTH FLOOR</span><h4>Selectorised machines</h4><p>Chest press, lateral raise, leg press and more</p></div>
+      <div class="tile t2 rv d1"><div class="bg"></div><span class="lbl">FREE WEIGHTS</span><h4>Dumbbells &amp; racks</h4></div>
+      <div class="tile t3 rv d2"><div class="bg"></div><span class="lbl">CARDIO</span><h4>Treadmills &amp; bikes</h4></div>
+      <div class="tile t4 rv d1"><div class="bg"></div><span class="lbl">STUDIO</span><h4>Yoga &amp; MMA zone</h4></div>
+      <div class="tile t5 rv d2"><div class="bg"></div><span class="lbl">RECOVERY</span><h4>Ice bath</h4></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="rv">Why members <span class="serif">choose</span> KRUX</h2>
+    </div>
+    <div class="why">
+      <div class="why-item rv"><b>01</b><h4>Certified coaches</h4><p>Every trainer is a certified professional who plans your training and keeps your form right.</p></div>
+      <div class="why-item rv d1"><b>02</b><h4>Everything in one place</h4><p>Lift, fight, stretch and recover without switching between a gym, a studio and a spa.</p></div>
+      <div class="why-item rv d2"><b>03</b><h4>A real community</h4><p>Train alongside people who push you, in a premium space that's never chaotic.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="membership" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="rv">Pick your <span class="serif">plan</span></h2>
+      <p class="rv d1">Sample plans for the preview. Prices and details shared on enquiry.</p>
+    </div>
+    <div class="plans">
+      <div class="plan rv">
+        <span class="tagp">Essential</span><h3>Gym</h3><p class="desc">Full access to the strength and cardio floor.</p>
+        <ul><li>Strength &amp; cardio floor</li><li>Trainer floor support</li><li>Locker access</li></ul>
+        <a href="#visit" class="btn btn-line">Enquire</a>
+      </div>
+      <div class="plan feat rv d1">
+        <span class="pop">MOST POPULAR</span>
+        <span class="tagp">Complete</span><h3>Gym + Classes</h3><p class="desc">Train every way: strength, combat and flow.</p>
+        <ul><li>Everything in Essential</li><li>MMA &amp; conditioning</li><li>Yoga &amp; mobility</li><li>Recovery sessions</li></ul>
+        <a href="#visit" class="btn btn-cream">Enquire</a>
+      </div>
+      <div class="plan rv d2">
+        <span class="tagp">Upgrade</span><h3>Personal Training</h3><p class="desc">One-to-one coaching built around you.</p>
+        <ul><li>Custom programme</li><li>Progress tracking</li><li>Nutrition guidance</li></ul>
+        <a href="#visit" class="btn btn-line">Enquire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow rv">Visit us</div>
+      <h2 class="rv d1" style="margin-top:16px">Your first session <span class="serif">is on us</span></h2>
+      <div class="addr">
+        <a class="rv d2" href="https://maps.google.com/?q=167+VN+Marg+Kalina+Santacruz+East+Mumbai+400098" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span><small>Address</small>167, VN Marg, Kalina, Santacruz East, Mumbai 400098</span></a>
+        <div class="rv d3">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-4-7.5L21 3v5h-5"/></svg>
+          <span><small>WhatsApp / Call</small>+91 XXXXX XXXXX</span></div>
+        <a class="rv d4" href="https://instagram.com/krux_getfit" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
+          <span><small>Instagram</small>@krux_getfit</span></a>
+      </div>
+    </div>
+    <form class="rv d2" onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';this.reset();">
+      <h3>Book a free trial</h3>
+      <p>Leave your details and the team will call you back.</p>
+      <div class="field"><input id="n" required placeholder=" "><label for="n">Your name</label></div>
+      <div class="field"><input id="p" required type="tel" placeholder=" "><label for="p">Phone number</label></div>
+      <div class="field"><select required aria-label="Interested in">
+        <option value="">Interested in…</option><option>Strength</option><option>MMA / Combat</option><option>Yoga / Flow</option><option>Recovery</option><option>Personal Training</option>
+      </select></div>
+      <button class="btn btn-green" type="submit" style="justify-content:center;border:0;cursor:pointer;margin-top:8px">Book My Trial <span class="arr">→</span></button>
+      <p class="ok">Thank you! We'll call you shortly. (Demo form)</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="big">KRUX</div>
+    <div class="row"><span>Premium Fitness &amp; Wellness Club · Santacruz East, Mumbai</span><span>Concept preview design for feedback</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),bar=document.getElementById('progress');
+  function onScroll(){
+    var y=window.scrollY,h=document.documentElement.scrollHeight-innerHeight;
+    nav.classList.toggle('scrolled',y>10);
+    bar.style.width=(h>0?y/h*100:0)+'%';
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function count(el){
+    var to=+el.dataset.count;if(reduce){el.textContent=to;return}
+    var t0=performance.now();
+    (function step(t){var p=Math.min((t-t0)/1400,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)})(t0);
+  }
+  if(!('IntersectionObserver' in window)){
+    document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});
+    document.querySelectorAll('[data-count]').forEach(count);return;
+  }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;
+    e.target.classList.add('in');
+    e.target.querySelectorAll('[data-count]').forEach(count);
+    io.unobserve(e.target);
+  })},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
